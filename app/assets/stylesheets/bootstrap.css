@@ -7,7 +7,7 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
-
+@import url(http://fonts.googleapis.com/css?family=Neucha);
 .clearfix {
   *zoom: 1;
 }
@@ -4380,7 +4380,7 @@ input[type="submit"].btn.btn-mini {
   background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
   background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
   background-repeat: repeat-x;
-  border: 1px solid hotpink;
+  border: 1px solid gray;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -4416,10 +4416,11 @@ input[type="submit"].btn.btn-mini {
   float: left;
   padding: 10px 20px 10px;
   margin-left: -20px;
-  font-size: 20px;
+  font-size: 34px;
   font-weight: 200;
-  color: #777777;
-  text-shadow: 0 1px 0 #ffffff;
+  color: black;
+  text-shadow: 0 1px 0 deeppink;
+  font-family: 'Neucha', cursive;
 }
 
 .navbar .brand:hover,
