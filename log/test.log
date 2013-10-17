@@ -548,3 +548,119 @@ Connecting to database specified by database.yml
   [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."profile_name" = 'roadpoo' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "statuses"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 19:19:27', '2013-10-16 19:19:27', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 19:19:27', '2013-10-16 19:19:27', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "profile_name", "created_at", "updated_at", "id") VALUES ('Alice', 'K', 'roadpoo@gmail.com', 'roadpoo', '2013-10-16 19:19:27', '2013-10-16 19:19:27', 642749254)
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-10-16 12:19:27 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (74.1ms)
+Completed 500 Internal Server Error in 142ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "statuses"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 19:31:10', '2013-10-16 19:31:10', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 19:31:10', '2013-10-16 19:31:10', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "profile_name", "created_at", "updated_at", "id") VALUES ('Alice', 'K', 'roadpoo@gmail.com', 'roadpoo', '2013-10-16 19:31:10', '2013-10-16 19:31:10', 642749254)
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-10-16 12:31:10 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (83.8ms)
+Completed 500 Internal Server Error in 109ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "statuses"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 20:07:52', '2013-10-16 20:07:52', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 20:07:52', '2013-10-16 20:07:52', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "profile_name", "created_at", "updated_at", "id") VALUES ('Alice', 'K', 'roadpoo@gmail.com', 'roadpoo', '2013-10-16 20:07:52', '2013-10-16 20:07:52', 642749254)
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-10-16 13:07:52 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (85.8ms)
+Completed 500 Internal Server Error in 112ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signout" for 127.0.0.1 at 2013-10-16 13:07:53 -0700
+Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "statuses"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 20:08:05', '2013-10-16 20:08:05', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 20:08:05', '2013-10-16 20:08:05', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "profile_name", "created_at", "updated_at", "id") VALUES ('Alice', 'K', 'roadpoo@gmail.com', 'roadpoo', '2013-10-16 20:08:05', '2013-10-16 20:08:05', 642749254)
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-10-16 13:08:05 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (85.3ms)
+Completed 500 Internal Server Error in 112ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signout" for 127.0.0.1 at 2013-10-16 13:08:05 -0700
+Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "statuses"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 20:10:13', '2013-10-16 20:10:13', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 20:10:13', '2013-10-16 20:10:13', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "profile_name", "created_at", "updated_at", "id") VALUES ('Alice', 'K', 'roadpoo@gmail.com', 'roadpoo', '2013-10-16 20:10:13', '2013-10-16 20:10:13', 642749254)
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-10-16 13:10:13 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (68.9ms)
+Completed 500 Internal Server Error in 136ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signout" for 127.0.0.1 at 2013-10-16 13:10:14 -0700
+Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "statuses"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 20:54:18', '2013-10-16 20:54:18', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "statuses" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2013-10-16 20:54:18', '2013-10-16 20:54:18', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "profile_name", "created_at", "updated_at", "id") VALUES ('Alice', 'K', 'roadpoo@gmail.com', 'roadpoo', '2013-10-16 20:54:18', '2013-10-16 20:54:18', 642749254)
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/register" for 127.0.0.1 at 2013-10-16 13:54:18 -0700
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-10-16 13:54:18 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+Completed 500 Internal Server Error in 149ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signout" for 127.0.0.1 at 2013-10-16 13:54:18 -0700
+Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
