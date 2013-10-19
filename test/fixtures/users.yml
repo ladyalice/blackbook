@@ -9,5 +9,3 @@ phil:
   last_name: "pickle"
   email: "asd@asd.com"
   profile_name: "hotdog"
-  password: "password"
-  password_confirmation: "password"
