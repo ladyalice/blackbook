@@ -28,7 +28,7 @@ class UserTest < ActiveSupport::TestCase
     #below links to fixtures profile name (like pulling code from css stylesheet)
     #when you add this to the validation user.rb nfile (models folder)
     #it will then pass
-    user.profile_name = users(:Alice).profile_name
+    user.profile_name = users(:phil).profile_name
 
     puts user.errors.inspect
     
