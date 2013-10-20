@@ -7,7 +7,7 @@ class Status < ActiveRecord::Base
   validates :user_id, presence: true,
   #for some reason, length: {minimum: 4 } doesn't work, 
   #only this old school way, despite the vs of rails I'm running
-             :length => { :minimum => 2 }
+            :length => { :minimum => 2 }
 
 
 end
