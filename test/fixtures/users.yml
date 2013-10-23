@@ -9,3 +9,9 @@ phil:
   last_name: "pickle"
   email: "asd@asd.com"
   profile_name: "hotdog"
+
+alice:
+  first_name: "alice"
+  last_name: "k"
+  email: "roadpoo@gmail.com"
+  profile_name: "roadpoo"

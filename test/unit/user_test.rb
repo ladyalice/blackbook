@@ -29,10 +29,7 @@ class UserTest < ActiveSupport::TestCase
     #when you add this to the validation user.rb nfile (models folder)
     #it will then pass
     user.profile_name = users(:phil).profile_name
-
-    puts user.errors.inspect
     
-    # (!) bang makes it so the created 'test user doesn't get saved to the database
     assert !user.save
     assert !user.errors[:profile_name].empty?
   end
@@ -40,21 +37,18 @@ class UserTest < ActiveSupport::TestCase
   test "a user should have a profile name without spaces" do
     user = User.new
     #sample case below, this profile has spaces so it should fail the test pass. If not then it's a false positive test
-    #user.profile_name = "My profile with spaces"
-    #user.profile_name = "phil_new2"
-    user.profile_name = 'roadpoo'
+    user.profile_name = "My profile with spaces"
     assert !user.save
     assert !user.errors[:profile_name].empty?
-
-    assert user.errors[:profile_name].include?("Must be formatted correctly.")
+    assert user.errors[:profile_name].include?("must be formatted correctly.")
 
   end
 
   test "a user can have a correctly formatted profile name" do
-    user = User.new(first_name: 'alice', last_name: "k", email: "asd@asd.com")
+    user = User.new(first_name: 'alice', last_name: "k", email: "asd1@asd.com")
     user.password = user.password_confirmation = "password"
     user.profile_name = 'roadpoo'
-    assert !user.save
+    assert user.save
     assert user.valid?
 
 

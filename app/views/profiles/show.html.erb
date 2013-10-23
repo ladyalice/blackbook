@@ -1,0 +1,15 @@
+<div class="page-header">
+	<!--can reference @user object since it was an instance variable created in the controller -->
+	<h1><%= @user.full_name %></h1>
+</div>
+
+<% if @statuses %>
+<!-- if there are statuses, loop using each. for each status update assign it to |status| variable loop pipes indicate a new variable for this if statement. So, the |status| will run for each @statuses the @user has-->
+	<% @statuses.each do |status| %>
+	<div class="well">
+		<%= status.content %>
+		<hr>
+		<%= link_to time_ago_in_words(status.created_at), status_path(status) %> ago
+	</div>
+	<% end %>
+	<% end %>

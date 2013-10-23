@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CustomRoutesTest < ActionDispatch::IntegrationTest
   test "that signin route opens the signin page" do
-    b get '/signin'
+    get '/signin'
     assert_response :success
   end
 
@@ -15,5 +15,10 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
     get '/signout'
     assert_response :redirect
     assert_redirected_to "/"
+  end
+
+  test "test a profile page works" do
+    get '/roadpoo'
+    assert_response :success
   end
 end
